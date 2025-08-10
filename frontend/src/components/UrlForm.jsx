@@ -8,7 +8,7 @@ export default function UrlForm({ onUrlCreated }) {
   const dispatch=useDispatch()
   const handleSubmit = async e => {
     e.preventDefault();
-    const res = await fetch("https://url-shortener-o2nx.onrender.com/shorten", {
+    const res = await fetch("https://url-shortener-o2nx.onrender.com/api/shorten", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ originalUrl })
