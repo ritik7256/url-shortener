@@ -30,7 +30,7 @@ export default function UrlList() {
                   <span className="text-md font-bold">Short Url:{" "}</span>
                   <a
                     
-                    href={`http://localhost:5000/${url.shortCode}`}
+                    href={`https://url-shortener-o2nx.onrender.com/${url.shortCode}`}
                     target="_blank"
                     rel="noreferrer"
                     className="text-green-600 hover:text-green-800 font-semibold "

@@ -7,13 +7,13 @@ export default function AdminDashboard() {
   const urls = useSelector(state => state.url.urls);
 
   const fetchUrls = async () => {
-    const res = await fetch("http://localhost:5000/api/urls");
+    const res = await fetch("https://url-shortener-o2nx.onrender.com/api/urls");
     const data = await res.json();
     dispatch(setUrls(data));
   };
 
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:5000/api/urls/${id}`, { method: "DELETE" });
+    await fetch(`https://url-shortener-o2nx.onrender.com/api/urls/${id}`, { method: "DELETE" });
     dispatch(deleteUrlAction(id)); // instantly remove from redux store
   };
 

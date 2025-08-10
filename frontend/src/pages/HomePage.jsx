@@ -7,7 +7,7 @@ export default function HomePage() {
   
   const dispatch=useDispatch()
   const fetchUrls = async () => {
-    const res = await fetch("http://localhost:5000/api/urls");
+    const res = await fetch("https://url-shortener-o2nx.onrender.com/api/urls");
     const data = await res.json();
     dispatch(setUrls(data))
     
